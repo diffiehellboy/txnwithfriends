@@ -65,7 +65,12 @@ Waves                  WAVES   5.40     539,962,000     0.91
 Create a new wallet:
 
 ```
-$ sudo txnwithfriends wallet create
+$ sudo txnwithfriends wallet create --currency BTC
+No name specified, using default name "btc"...
+Building Docker image for BTC...
+Docker image built.
+No running Docker container for BTC detected, running now...
+
 ```
 
 Create a new full node (useful for mining or participating in the network):
@@ -78,11 +83,18 @@ Shapeshift from one currency to another:
 
 ```
 $ sudo txnwithfriends shapeshift \
-    -o from=eth,to=BTC,addr=1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqX
-You are about to convert 0.33 ETH to BTC.
+    -o from=eth,amount=0.33,to=BTC,addr=1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqX
+You are about to convert 0.33 ETH to 0.03 BTC.
 Are you 100% sure you want to proceed? y
 ...
 Your transaction is at: https://shapeshift.io/foo/blah
+```
+
+Back up your private keys for the wallet in question:
+
+```
+$ sudo txnwithfriends export-keys -o keys.tar btc
+Output private key backup for wallet "btc" to file "keys.tar".  Protect it!
 ```
 
 ## Commands
