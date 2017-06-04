@@ -78,7 +78,7 @@ Shapeshift from one currency to another:
 
 ```
 $ sudo txnwithfriends shapeshift \
-    -o from=btc,to=ETH,dest_addr=1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqX
+    -o from=eth,to=BTC,addr=1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqX
 You are about to convert 0.33 ETH to BTC.
 Are you 100% sure you want to proceed? y
 ...
